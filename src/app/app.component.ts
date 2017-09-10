@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  htmlOptions = {
+    theme: 'light'
+  };
+
+  callback() {
+    alert('This callback is a method in the parent component.');
+  }
 }

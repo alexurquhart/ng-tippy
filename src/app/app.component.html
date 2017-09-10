@@ -14,8 +14,11 @@
 <section class="section">
   <div class="container has-text-centered">
     <h1 class="title has-text-centered">Features</h1>
+    <h2 class="subtitle has-text-centered">
+      Hover your cursor over the buttons to see Tippy in action!
+    </h2>
 
-    <app-showcase-button icon="minus" appTooltip title="Default tooltip">
+    <app-showcase-button icon="thumbs-o-up" appTooltip title="Default tooltip">
       Default
     </app-showcase-button>
 
@@ -23,15 +26,125 @@
       Positioning
     </app-showcase-button>
 
-    <app-showcase-button icon="minus" appTooltip title="asdf">
-      Default
+    <app-showcase-button icon="caret-down" appTooltip title="I have an arrow" data-arrow="true">
+      Arrows
     </app-showcase-button>
 
-    <a href="#" class="button is-large is-showcase" appTooltip title="test" data-position="bottom">
-        <span *ngIf="icon" class="icon is-medium"><i class="fa fa-user"></i></span>
-        <span>asdf</span>
-    </a>
-    
+    <app-showcase-button
+      icon="i-cursor"
+      appTooltip title="You can interact with me"
+      data-interactive="true">
+        Interactivity
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="mouse-pointer"
+      appTooltip title="You clicked on me"
+      data-trigger="click">
+        Triggers <small>(click)</small>
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="pencil"
+      appTooltip title="I have a light theme"
+      data-theme="light">
+        Themes
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="search-plus"
+      appTooltip title="Scale animation"
+      data-animation="scale"
+      data-animatefill="false">
+        Scale Animation
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="sliders"
+      appTooltip title="Fade animation"
+      data-animation="fade"
+      data-animatefill="false">
+        Fade Animation
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="eye"
+      appTooltip title="Perspective Animation"
+      data-animation="perspective"
+      data-animatefill="false">
+        Perspective Animation
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="line-chart"
+      appTooltip title="Inertia Animation"
+      data-inertia="true"
+      data-animatefill="false">
+        Inertia Animation
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="clock-o"
+      appTooltip title="I was delayed by 600ms"
+      data-delay="[600, 200]">
+        Delay
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="clock-o"
+      appTooltip title="I appear longer"
+      data-duration="1000"
+      data-animatefill="false"
+      data-animation="fade">
+        Duration
+    </app-showcase-button>
+
+    <app-showcase-button
+      icon="bolt"
+      appTooltip title="I appear instantly"
+      data-duration="0">
+        Instant
+    </app-showcase-button>
+
+    <app-showcase-button
+    icon="phone"
+    appTooltip title="I called you back"
+    [options]="{onShow: callback}">
+      Callbacks
+  </app-showcase-button>
+
+  <app-showcase-button
+    icon="hand-pointer-o"
+    appTooltip title="I follow your cursor"
+    data-followcursor="true">
+      Follow Cursor
+  </app-showcase-button>
+
+  <app-showcase-button
+    icon="plus"
+    appTooltip title="I am a big tooltip"
+    data-size="big">
+      Big
+  </app-showcase-button>
+
+  <app-showcase-button
+    icon="minus"
+    appTooltip title="I am a small tooltip"
+    data-size="small">
+      Small
+  </app-showcase-button>
+
+  <!-- <app-showcase-button
+    icon="code"
+    appTooltip
+    [options]="htmlOptions">
+      Angular Templates
+  </app-showcase-button>
+
+  <ng-template #htmlTemplate>
+    <p *ngFor="let num of [1,2,3,4]">This is an angular template line {{ num }}</p>
+  </ng-template> -->
+
   </div>
 </section>
 

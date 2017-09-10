@@ -34,6 +34,10 @@ export class TooltipDirective implements OnInit, OnChanges {
     tippy(this._el, options);
   }
 
+  // Detects if the directive is placed on an angular component
+  // host node. The tooltip will not display correctly, so
+  // instead we will transfer all data-attributes and title to the first
+  // child of the component.
   detectHostNode() {
     const attrs = this._el.attributes;
 
@@ -44,7 +48,7 @@ export class TooltipDirective implements OnInit, OnChanges {
       }
     }
 
-    if (hostNode) {
+    if (hostNode && this._el.children.length > 0) {
       this._el = this._el.children[0];
       this.xferAttributes(this._host, this._el);
     }
@@ -93,6 +97,7 @@ export class TooltipDirective implements OnInit, OnChanges {
 
     if (fromEl.hasAttribute('title')) {
       toEl.title = fromEl.title;
+      fromEl.title = '';
     }
   }
 }

@@ -6,8 +6,7 @@
     letter-spacing: 0.5px;
     border: none;
     font-size: 1.3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 1rem;
   }
 
 .is-showcase:hover {

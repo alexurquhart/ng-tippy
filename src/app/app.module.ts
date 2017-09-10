@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TooltipDirective } from 'app/tooltip.directive';
+import { ShowcaseButtonComponent } from './showcase-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TooltipDirective
+    TooltipDirective,
+    ShowcaseButtonComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,40 @@
-<span appTooltip title="Tooltip works!">
-  {{title}}
-</span>
+<section class="hero is-info is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        ng-tippy
+      </h1>
+      <h2 class="subtitle">
+        Using fantastic <a href="https://atomiks.github.io/tippyjs/" target="_blank">Tippy.js</a> tooltips in Angular
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container has-text-centered">
+    <h1 class="title has-text-centered">Features</h1>
+
+    <app-showcase-button icon="minus" appTooltip title="Default tooltip">
+      Default
+    </app-showcase-button>
+
+    <app-showcase-button icon="arrows" appTooltip title="I'm on the bottom" data-position="bottom">
+      Positioning
+    </app-showcase-button>
+
+    <app-showcase-button icon="minus" appTooltip title="asdf">
+      Default
+    </app-showcase-button>
+
+    <a href="#" class="button is-large is-showcase" appTooltip title="test" data-position="bottom">
+        <span *ngIf="icon" class="icon is-medium"><i class="fa fa-user"></i></span>
+        <span>asdf</span>
+    </a>
+    
+  </div>
+</section>
+
+<section class="footer">
+
+</section>

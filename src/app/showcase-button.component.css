@@ -1,0 +1,17 @@
+.is-showcase {
+    color: white;
+    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);
+    background: -webkit-linear-gradient(315deg,#73a5ff, #5477f5);
+    background: linear-gradient(135deg,#73a5ff, #5477f5);
+    letter-spacing: 0.5px;
+    border: none;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+.is-showcase:hover {
+    box-shadow: 0 10px 15px -1px rgba(0, 0, 0, 0.1), 0 25px 50px -4px rgba(80, 140, 255, 0.3);
+    -webkit-filter: brightness(1.15) hue-rotate(10deg) contrast(1.5);
+    filter: brightness(1.15) hue-rotate(10deg) contrast(1.5);
+}

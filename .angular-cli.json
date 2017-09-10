@@ -21,7 +21,8 @@
       "styles": [
         "styles.css",
         "../node_modules/bulma/css/bulma.css",
-        "../node_modules/tippy.js/dist/tippy.css"
+        "../node_modules/tippy.js/dist/tippy.css",
+        "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [
         "../node_modules/tippy.js/dist/tippy.js"

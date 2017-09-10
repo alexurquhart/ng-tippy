@@ -89,11 +89,11 @@ export class TooltipDirective implements OnInit, OnChanges {
     ];
 
     // Copy data attributes from the input element to the target element
-    for (const da of daList) {
+    daList.forEach(da => {
       if (fromEl.dataset[da]) {
         toEl.dataset[da] = fromEl.dataset[da];
       }
-    }
+    });
 
     if (fromEl.hasAttribute('title')) {
       toEl.title = fromEl.title;

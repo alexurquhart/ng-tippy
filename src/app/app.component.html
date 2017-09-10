@@ -5,7 +5,7 @@
         ng-tippy
       </h1>
       <h2 class="subtitle">
-        Using fantastic <a href="https://atomiks.github.io/tippyjs/" target="_blank">Tippy.js</a> tooltips in Angular
+        Using the fantastic <a href="https://atomiks.github.io/tippyjs/" target="_blank">Tippy.js</a> tooltip library in Angular
       </h2>
     </div>
   </div>
@@ -15,7 +15,7 @@
   <div class="container has-text-centered">
     <h1 class="title has-text-centered">Features</h1>
     <h2 class="subtitle has-text-centered">
-      Hover your cursor over the buttons to see Tippy in action!
+      Hover your cursor over the buttons to see ng-tippy in action!
     </h2>
 
     <app-showcase-button icon="thumbs-o-up" appTooltip title="Default tooltip">
@@ -144,10 +144,94 @@
   <ng-template #htmlTemplate>
     <p *ngFor="let num of [1,2,3,4]">This is an angular template line {{ num }}</p>
   </ng-template> -->
-
   </div>
 </section>
 
-<section class="footer">
-
+<section class="section">
+  <div class="container">
+    <h1 class="title has-text-centered">Interactive</h1>
+    <h2 class="subtitle has-text-centered">Tooltip text and their options can be bound to component properties.</h2>
+    
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="tile is-child has-text-centered">
+          <app-showcase-button
+            appTooltip [title]="'asdf'"
+            [options]="modelOptions">
+              Change My Options
+          </app-showcase-button>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          asdf
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="hero is-info is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <p class="title">Installation</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="content is-medium">
+      <p>
+        ng-tippy is not yet provided as an Angular 4 module. The steps to install it in an Angular-CLI application are follows:
+      </p>
+      <p>Using npm install <a href="https://atomiks.github.io/tippyjs/" target="_blank">Tippy.js</a></p>
+      <pre><code>$ npm i --save tippy.js</code></pre>
+
+      <p>Add Tippy.js and Tippy.css to your <code>.angular-cli.json</code></p>
+      <pre><code>
+  ...
+  "styles": [
+    "styles.css",
+    <strong>"../node_modules/tippy.js/dist/tippy.css"</strong>
+  ],
+  "scripts": [
+    <strong>"../node_modules/tippy.js/dist/tippy.js"</strong>
+  ],
+  ...
+      </code></pre>
+
+      <p>Add a type declaration Tippy in <code>typings.d.ts</code></p>
+
+      <pre><code>declare var tippy: Function;</code></pre>
+
+      <p>Next, you will need to <strong><a href="https://raw.githubusercontent.com/alexurquhart/ng-tippy/master/src/app/tooltip.directive.ts" target="_blank">
+        download tooltip.directive.ts</a></strong> and import/declare it in your <code>app.module.ts</code>
+      </p>
+
+      <pre><code>
+...
+<strong>import &#123; TooltipDirective &#125; from 'app/tooltip.directive';</strong>
+
+@NgModule(&#123;
+  declarations: [
+    AppComponent,
+    <strong>TooltipDirective,</strong>
+  ],
+...
+      </code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-info is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <p class="title">Usage</p>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="footer">
+
+</section> -->

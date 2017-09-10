@@ -12,6 +12,8 @@ export class AppComponent {
     theme: 'light'
   };
 
+  modelOptions = {};
+
   callback() {
     alert('This callback is a method in the parent component.');
   }

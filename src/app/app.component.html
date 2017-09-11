@@ -147,29 +147,7 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h1 class="title has-text-centered">Interactive</h1>
-    <h2 class="subtitle has-text-centered">Tooltip text and their options can be bound to component properties.</h2>
-    
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <div class="tile is-child has-text-centered">
-          <app-showcase-button
-            appTooltip [title]="'asdf'"
-            [options]="modelOptions">
-              Change My Options
-          </app-showcase-button>
-        </div>
-      </div>
-      <div class="tile is-parent">
-        <div class="tile is-child box">
-          asdf
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-interactive-tooltip></app-interactive-tooltip>
 
 <section class="hero is-info is-bold">
   <div class="hero-body">

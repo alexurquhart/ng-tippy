@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TooltipDirective } from 'app/tooltip.directive';
 import { ShowcaseButtonComponent } from './showcase-button.component';
+import { InteractiveTooltipComponent } from './interactive-tooltip/interactive-tooltip.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TooltipDirective,
     ShowcaseButtonComponent,
+    InteractiveTooltipComponent,
   ],
   imports: [
     BrowserModule,
